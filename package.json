@@ -1,6 +1,6 @@
 {
   "name": "create-rest-parcel",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "create-rest-parcel ",
   "main": "index.js",
   "scripts": {

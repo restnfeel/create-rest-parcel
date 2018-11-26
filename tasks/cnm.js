@@ -139,17 +139,8 @@ if (major < 8) {
       const bar = new _cliProgress.Bar({}, _cliProgress.Presets.shades_classic);
       bar.start(100, 0);
 
-      let step1 = await makePublicHtml(modulename);
-      let promiseOne = new Promise((resolve, reject) => {
-        if (step1) {
-          resolve("success");
-        } else {
-          reject("make index html file error");
-        }
-      });
-
       let step2 = await makePackageJson(modulename);
-      let promiseTwo = new Promise((resolve, reject) => {
+      let promiseOne = new Promise((resolve, reject) => {
         if (step2) {
           resolve("success");
         } else {
@@ -157,14 +148,24 @@ if (major < 8) {
         }
       });
 
+      let step3 = await copyTemplateToUserDir(createDirName);
+      let promiseThree = new Promise((resolve, reject) => {
+        if (step3) {
+          resolve("success");
+        } else {
+          reject("copyTemplateToUserDir error");
+        }
+      });
+
       // promise go
       promiseOne
-        .then(res1 => {
-          bar.update(30);
-          return promiseTwo;
-        })
         .then(res2 => {
           bar.update(70);
+          return promiseThree;
+        })
+        .then(res3 => {
+          bar.update(100);
+          bar.stop();
 
           showCompleteMessage(createDirName, modulename);
         })
