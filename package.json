@@ -1,11 +1,30 @@
 {
   "name": "create-rest-parcel",
-  "version": "1.0.0",
-  "description": "parcel based create-rest-module [React, GraphQL]",
+  "version": "0.0.1",
+  "description": "create-rest-parcel ",
   "main": "index.js",
   "scripts": {
+    "create-rest-parcel": "node tasks/cnm.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Seo Jeong Hwan",
-  "license": "ISC"
+  "bin": {
+    "create-rest-parcel": "tasks/cnm.js"
+  },
+  "preferGlobal": true,
+  "keywords": [],
+  "author": "Jeong Hwan, Seo",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "cli-progress": "^2.1.0",
+    "commander": "^2.18.0",
+    "fs-extra": "^7.0.0",
+    "global": "^4.3.2",
+    "progress": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/restnfeel/create-rest-parcel.git"
+  },
+  "homepage": "https://www.restnfeel.com"
 }
