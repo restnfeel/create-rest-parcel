@@ -14,8 +14,10 @@
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-transform-parameters",
     "@babel/plugin-transform-flow-strip-types",
-    "flow-react-proptypes",
-    "@babel/plugin-proposal-object-rest-spread"
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-proposal-object-rest-spread",
+    "flow-react-proptypes"
   ],
   "retainLines": true
 }
