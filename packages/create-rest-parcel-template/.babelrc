@@ -1,3 +1,21 @@
 {
-  "presets": ["env", "react"]
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "modules": false
+      }
+    ],
+    "@babel/react"
+  ],
+  "plugins": [
+    ["@babel/plugin-propposal-decorators", { "legacy": true }],
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-transform-parameters",
+    "@babel/plugin-transform-flow-strip-types",
+    "flow-react-proptypes",
+    "@babel/plugin-proposal-object-rest-spread"
+  ],
+  "retainLines": true
 }
